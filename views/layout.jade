@@ -1,0 +1,20 @@
+!!! 5
+html
+  head
+    title blog titulo
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #container
+      .header
+        h1 Titulo blog
+      #left-column.column
+        h2 Archivo
+        ul#heroes
+          each hero in heroes
+            li(class='hero-name')
+              a(href='#') #{hero}
+      #right-column.column
+        #content!= body
+      
+      #footer
+        a(href="http://www.piribisoft.com") PiribiSoft
