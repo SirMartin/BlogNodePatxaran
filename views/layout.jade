@@ -5,16 +5,59 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     #container
-      .header
-        h1 Titulo blog
-      #left-column.column
-        h2 Archivo
-        ul#heroes
-          each hero in heroes
-            li(class='hero-name')
-              a(href='#') #{hero}
-      #right-column.column
-        #content!= body
+      #header
+        h1.right Warped
+        h1 
+          a(href="#") Warped
+        ul#nav
+            li(class='right')
+              input(type="text", value="Search...")
+            li
+              a(href="#intro") Introduction
+            li
+              a(href="#about") About
+            li
+              a(href="#examples") Examples
+            li 
+              a(href="#contact") Contact
+
+      div.clear
+
+      div#sidebar
+        h2 Latest News or Comments
+
+        p.news An example of a "latest news" type text area. Here would be the excerpt of the article. You can of course put anything you like here. 
+          a(href="#", class="more") Read More »
+
+        p.news An example of a "latest news" type text area. Here would be the excerpt of the article. You can of course put anything you like here. 
+          a(href="#", class="more") Read More »
+
+        p.news An example of a "latest news" type text area. Here would be the excerpt of the article. You can of course put anything you like here. 
+          a(href="#", class="more") Read More »
+
+        h2 Sub Navigation
+
+        ul
+          li
+            a(href="#intro") Introduction
+          li
+            a(href="#about") About
+          li
+            a(href="#examples") Examples
+          li 
+            a(href="#contact") Contact
+
+        h2 Search
+        input(name="", type="text", value="Search...")
       
+      div#content
+        h2
+          a(href="#", id="intro") Introduction
+
+        p Hello and welcome to <strong>Warped</strong>, a dark, fluid template created by <a href="http://www.sixshootermedia.com">Six Shooter Media</a>. Warped is a simple template making use of standard features; a header, a navigation area, and side column, a main column and a footer. Pink and grey make up the colour scheme it the template aesthetics were inspired by the song 'Warped' by the Red Hot Chili Peppers.
+
+        div.details
+          p Posted by <a href="#">User Name</a> on <a href="#">01.01.01.</a> There are <a href="#">25 Comments</a>.
+
       #footer
         a(href="http://www.piribisoft.com") PiribiSoft
