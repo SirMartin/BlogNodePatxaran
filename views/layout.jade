@@ -1,6 +1,7 @@
 !!! 5
 html
   head
+    script(src="/javascripts/jquery-1.7.2.min.js")
     title blog titulo
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
@@ -9,6 +10,7 @@ html
         h1.right Warped
         h1 
           a(href="#") Warped
+        br/
         ul#nav
             li(class='right')
               input(type="text", value="Search...")
@@ -50,14 +52,7 @@ html
         h2 Search
         input(name="", type="text", value="Search...")
       
-      div#content
-        h2
-          a(href="#", id="intro") Introduction
-
-        p Hello and welcome to <strong>Warped</strong>, a dark, fluid template created by <a href="http://www.sixshootermedia.com">Six Shooter Media</a>. Warped is a simple template making use of standard features; a header, a navigation area, and side column, a main column and a footer. Pink and grey make up the colour scheme it the template aesthetics were inspired by the song 'Warped' by the Red Hot Chili Peppers.
-
-        div.details
-          p Posted by <a href="#">User Name</a> on <a href="#">01.01.01.</a> There are <a href="#">25 Comments</a>.
+      div#content!= body
 
       #footer
         a(href="http://www.piribisoft.com") PiribiSoft
