@@ -30,9 +30,12 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+app.get('/login', routes.login);
 app.get('/hero/:name', routes.hero);
 app.post('/hero/add-articulo', routes.addFact);
 
-app.listen(3000, function(){
-  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-});
+//app.listen(3000, function(){
+//  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+//});
+
+app.listen(process.env['app_port'] || 3000);
