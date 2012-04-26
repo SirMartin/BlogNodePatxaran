@@ -1,4 +1,5 @@
 var _ = require('underscore');
+var http = require('http');
 // TODO: This should be read from a database
 var heroes = [
   {
@@ -36,7 +37,7 @@ exports.login = function(req, res) {
 }
 
 exports.loginPost = function(req, res) {
-  console.log(req.body[0]);
+  console.log("a " + req.params.txtEmail);
   //Cogemos el email y el password.
   /*var email = $("#txtEmail").val();
   var password = $("#txtPassword").val();*/
