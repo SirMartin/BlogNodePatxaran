@@ -35,6 +35,44 @@ exports.login = function(req, res) {
   res.render('login')
 }
 
+exports.loginPost = function(req, res) {
+  console.log(req.body[0]);
+  //Cogemos el email y el password.
+  /*var email = $("#txtEmail").val();
+  var password = $("#txtPassword").val();*/
+
+  //Comprobamos primero que esten llenos los dos campos.
+  /*if ((email == "") || (password == ""))
+  {
+    //Esta vacio.
+    alert("Debes rellenar los campos de Email y Contraseña.");
+  }else{
+    console.log("1");
+    //Estan completados. Cogemos la BBDD.
+    var mongoose = require('mongoose');
+    var db = mongoose.connect('mongodb://patxa:piribi2012@dbh61.mongolab.com:27617/patxaran');
+    console.log("1-5");
+    var User = new Schema({
+      nick : String,
+      email : String,
+      password : String
+    })
+
+    mongoose.model('User', User);
+    var User = mongoose.model('User');
+
+    console.log("2");
+
+    User.findOne({ email: "sirmartin@gmail.com" }, function(err, doc) {
+      //doc is a document.
+      console.log("3");
+    });
+
+    console.log("4");
+  }*/
+  res.render('index')
+}
+
 exports.hero = function(req, res) {
   var facts = _(heroes).detect(function (p) {
     return p.name == req.params.name;
