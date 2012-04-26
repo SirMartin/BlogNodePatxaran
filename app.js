@@ -31,6 +31,7 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/login', routes.login);
+app.post('/login', routes.loginPost);
 app.get('/hero/:name', routes.hero);
 app.post('/hero/add-articulo', routes.addFact);
 
