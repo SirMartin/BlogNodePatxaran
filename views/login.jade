@@ -1,0 +1,13 @@
+script(src="/javascripts/view.login.js")
+
+h2
+  a(href="#", id="intro") Introduce tus datos para loguearte.
+
+div.details#login
+  form(action="/login", method="post")
+    p Email:&nbsp;
+      input(name="", id="txtEmail", type="text", value="")
+    p Password:&nbsp;
+      input(name="", id="txtPassword", type="password", value="")
+    p
+      input(name="", id="btnLaogin", type="submit", value="Login")
