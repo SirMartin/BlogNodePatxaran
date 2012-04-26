@@ -31,6 +31,10 @@ exports.index = function(req, res) {
   res.render('index', { heroes: names })
 };
 
+exports.login = function(req, res) {
+  res.render('login')
+}
+
 exports.hero = function(req, res) {
   var facts = _(heroes).detect(function (p) {
     return p.name == req.params.name;
